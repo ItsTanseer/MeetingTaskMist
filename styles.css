@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-btn.active {
+    background-color: white;
+    color: #333;
+}
+
+.nav-btn:not(.active) {
+    background-color: #333;
+    color: white;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.main {
+    padding: 60px 40px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-card {
+    text-align: center;
+}
+
+.image-placeholder {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    border-radius: 15px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-placeholder:hover {
+    transform: translateY(-5px);
+}
+
+.image-placeholder span {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.image-description {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.button-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.triangle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.triangle-btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid #ff6b35;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.triangle-btn:hover .triangle {
+    border-left-color: #ff8c42;
+}
+
+.message {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.message.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.instruction {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .main {
+        padding: 40px 20px;
+    }
+    
+    .logo {
+        font-size: 28px;
+    }
+}
