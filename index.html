@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIST</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src = "image.jpg" style="width: 100px;">
+        </div>
+        <nav class="nav">
+            <button class="nav-btn active">Home</button>
+            <button class="nav-btn">Glazing MIST</button>
+            <button class="nav-btn" onclick="window.location.href='https:www.wearemist.in';">About Us</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="image-grid">
+            <div class="image-card">
+                <div class="image-placeholder">
+                     <div class = "actualimg">
+                        <img src="images.jpg">
+                    </div>
+                </div>
+                <p class="image-description">Image description</p>
+            </div>
+            <div class="image-card">
+                <div class="image-placeholder">
+                    <span>image 2</span>
+                    <div class = "actualimg">
+                        <img src="Cyber-Security_Banner.jpg">
+                    </div>
+                </div>
+                <p class="image-description">Image description</p>
+            </div>
+            <div class="image-card">
+                <div class="image-placeholder">
+                    <div class = "actualimg">
+                        <img src="images (1).jpg">
+                    </div>
+                </div>
+                <p class="image-description">Image description</p>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button class="triangle-btn" id="triangleBtn">
+                <span class="btn-text">Click me</span>
+                <div class="triangle"></div>
+            </button>
+            <div class="message" id="message">YOU CLICKED THE BUTTON YAYYY!!!</div>
+         
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
