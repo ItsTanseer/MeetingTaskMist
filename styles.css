@@ -24,6 +24,19 @@ body {
     font-weight: bold;
     color: white;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo::after {
+    content: "MIST";
 }
 
 .nav {
@@ -84,6 +97,8 @@ body {
     margin-bottom: 15px;
     transition: transform 0.3s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .image-placeholder:hover {
@@ -94,6 +109,32 @@ body {
     color: #333;
     font-size: 18px;
     font-weight: 500;
+    z-index: 1;
+}
+
+.actualimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.actualimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.actualimg img:hover {
+    transform: scale(1.05);
 }
 
 .image-description {
